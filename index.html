@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1,  width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.0.min.css" />
+    <script type="text/javascript" src="modernizr-2.7.1.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.4.0.min.js"></script>
+  </head>
+  <body onload="onLoad()">
+
+
+   
+    <div data-role="content">
+
+      <div class="clearfix" id="login">
+        <div class="login" class="ui-content" data-role="content" role="main">
+          <div class="login-container">
+            <h1 class='titleClass'>Upišite pristupne podatke</h1>	
+			<input type="text" id="inputEmail" value="" placeholder="Korisnik">
+			<input type="text" id="password" value="" placeholder="Lozinka">
+          </div>
+		  <button class="ui-btn ui-btn-inline login-btn" id="btn_cancel">Cancel</button>
+		  <button class="ui-btn ui-btn-inline login-btn" id="btn_ok">OK</button>
+        </div>
+      </div>
+
+      
+
+       <div class="result">
+        <div id="btn-group-hidden" class="btn-group" data-toggle="buttons-radio">
+          <button type="button" class="btn btn-default" name="svi">svi</button>
+          <button type="button" class="btn btn-default" name="preostali">preostali</button>
+          <button type="button" class="btn btn-default" name="evidentirani">evidentirani</button>
+        </div>
+        <div class="result-container"></div>
+        <div id="count"></div>
+      </div>
+
+      <input type="hidden" id="hiddenField" value=""/>
+      <div class="noDataMessage"><div>There is no data of this voting place!</div></div>
+
+     
+
+        <div class="modal fade" id="errorLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              <h4 class="modal-title" id="myModalLabel">Pogreška prijava</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+
+      <div class="modal fade" id="stillData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              <h4 class="modal-title" id="H1">There are data which haven't been processed yet. Please wait!</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+
+
+    
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              <h4 class="modal-title" id="H2">Promjenu statusa</h4>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body-div">
+                <span id="firstImageTd">
+                  <a href='#' class='img_btn'>
+                    <img id='firstImage'/>
+                  </a>
+                </span>
+                <span id="firstTextTd"></span>
+              </div>
+              <div class="modal-body-div">
+                <span id="secondTextTd"></span>
+                <span id="secondImageTd">
+                  <a href='#' class='img_btn'>
+                    <img id='secondImage' />
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      
+      
+    </div>   <!-- /.end of container div -->
+
+  </body>
+</html>
